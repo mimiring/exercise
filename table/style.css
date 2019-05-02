@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+table, caption, thead, tbody, th, tr, td, div, span, em {
+    margin: 0;
+    padding: 0;
+}
+
 table {
     width: 600px;
     table-layout: fixed;
@@ -7,22 +12,13 @@ table {
     font-size: 12px;
 }
 th {
-    border: 1px solid #eaedef;
-    border-bottom: none;
-}
-tr {
-    border-right: 1px solid #eaedef;
-    border-bottom: 1px solid #eaedef;
-}
-td {
-    border-top: 1px solid #eaedef;
-    border-left: 1px solid #eaedef; 
-}
-th {
     height: 25px;
     color: #777;
-
 }
+th, tr, td {
+    border: 1px solid #eaedef;
+}
+
 .blind {
     position: absolute;
     clip: rect(0 0 0 0);
@@ -31,14 +27,21 @@ th {
     margin: -1px;
     overflow: hidden;
 }
+.title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
 .inner {
     position: relative;
     height: 80px;
     padding: 5px;
     box-sizing: border-box;
+
 }
 .date {
     font-weight: bold;
+    position: relative;
 }
 .text {
     display: block;
@@ -67,7 +70,13 @@ th {
     font-size: 10px;
     color: #bababa;
 }
-.today {
+.today .inner:before {
     border: 1px solid #868686;
     background-color: rgba(255, 255, 217, 0.7);
+    content:'';
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    left: -1px;
 }
