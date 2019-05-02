@@ -189,7 +189,7 @@ h1 {
     width: 188px;
     margin-bottom: 40px;
 }
-.sub_list .main_list::after {
+.sub_list ::after {
     display: block;
     content: '';
     clear: both;
