@@ -201,9 +201,39 @@ h1 {
 .sub_list li:nth-child(5n+1) {
     margin-left: 0;
 }
+.sub_list .img_wrap {
+    display : block;
+    position: relative;
+}
+.sub_list .time {
+    position: absolute;
+    right: 4px;
+    bottom : 4px;
+    height: 18px;
+    padding: 0 7px;
+    font-size: 10px;
+    line-height: 14px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.sub_list .watch_later_link {
+    display: none;
+    position: absolute;
+    right: 4px;
+    bottom: 4px;
+    width: 45px;
+    height: 45px;
+    background: url(image/later_watch.png) no-repeat;
+}
 .sub_list .item_link {
     display: block;
     position: relative;
+}
+.sub_list .img_wrap:hover .watch_later_link {
+    display: block;
+}
+.sub_list .img_wrap:hover .time {
+    display: none;
 }
 .sub_list .item_link::after {
     position: absolute;
